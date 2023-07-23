@@ -254,6 +254,10 @@ export default function Template() {
               Programming Languages &amp; Tools
             </div>
             <ul className="list-inline dev-icons">
+              
+              <li className="list-inline-item">
+                <i className="fab fa-php" />
+              </li>
               <li className="list-inline-item">
                 <i className="fab fa-html5" />
               </li>
@@ -263,8 +267,11 @@ export default function Template() {
               <li className="list-inline-item">
                 <i className="fab fa-js-square" />
               </li>
+              <li className="list-inline-item custom-icon">
+                <i className="fab fa-codeigniter"/>
+              </li>
               <li className="list-inline-item">
-                <i className="fab fa-angular" />
+                <i className="fab fa-laravel" />
               </li>
               <li className="list-inline-item">
                 <i className="fab fa-react" />
@@ -273,51 +280,22 @@ export default function Template() {
                 <i className="fab fa-node-js" />
               </li>
               <li className="list-inline-item">
-                <i className="fab fa-sass" />
-              </li>
-              <li className="list-inline-item">
-                <i className="fab fa-less" />
-              </li>
-              <li className="list-inline-item">
-                <i className="fab fa-wordpress" />
-              </li>
-              <li className="list-inline-item">
-                <i className="fab fa-gulp" />
-              </li>
-              <li className="list-inline-item">
-                <i className="fab fa-grunt" />
-              </li>
-              <li className="list-inline-item">
                 <i className="fab fa-npm" />
               </li>
+              
+              
+              <li className="list-inline-item">
+                <i className="fab fa-gitlab" />
+              </li>
+              <li className="list-inline-item">
+                <i className="fab fa-github" />
+              </li>
+              <li className="list-inline-item">
+                <i className="fab fa-gitkraken" />
+              </li>
+              
             </ul>
-            <div className="subheading mb-3">Workflow</div>
-            <ul className="fa-ul mb-0">
-              <li>
-                <span className="fa-li">
-                  <i className="fas fa-check" />
-                </span>
-                Mobile-First, Responsive Design
-              </li>
-              <li>
-                <span className="fa-li">
-                  <i className="fas fa-check" />
-                </span>
-                Cross Browser Testing &amp; Debugging
-              </li>
-              <li>
-                <span className="fa-li">
-                  <i className="fas fa-check" />
-                </span>
-                Cross Functional Teams
-              </li>
-              <li>
-                <span className="fa-li">
-                  <i className="fas fa-check" />
-                </span>
-                Agile Development &amp; Scrum
-              </li>
-            </ul>
+            
           </div>
         </section>
         <hr className="m-0" />

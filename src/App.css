@@ -68,3 +68,19 @@ nav.navbar-dark.bg-primary{
 .social-icons .social-icon:hover{
   background-color: #162B23 !important;
 }
+
+.dev-icons li.custom-icon i{
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  
+  
+}
+.fa-codeigniter{
+  background-image: url('images/codeigniter-icon.svg'); 
+
+}
+
+
