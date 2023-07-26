@@ -2,7 +2,7 @@
 You can visit the web page at [GitHub Pages](https://ronslowlife.github.io/aboutme).
 -----------------------------------------------------------------------------------
 
-I may not disclose the source code of the projects I have worked on due to confidentiality reasons, and some of them are proprietary to the employers.
+I may not disclose the source code of the projects I have worked on due to confidentiality reasons, and some of them are proprietary to employers.
 
 As a programmer, my expertise lies in web development and software engineering. I have worked on various web-based projects, ranging from building dynamic and interactive websites to developing backend systems and APIs. Throughout my career, I have gained proficiency in several programming languages, such as PHP, JavaScript, HTML, and CSS, depending on the project's requirements.
 
