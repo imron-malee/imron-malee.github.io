@@ -24,19 +24,24 @@ export default function Template() {
   const fetchData = async () => {
     let config = {
       method: 'get',
-      url: 'https://aboutme-api-imronmalee.vercel.app/api/getbyname/Imron%20Malee?v=4',
+      url: 'https://aboutme-api-imronmalee.vercel.app/api/getbyname/Imron%20Malee?v=444',
       headers: { }
     };
 
     try {
       //const response = await axios.get('https://aboutme-api-imronmalee.vercel.app/api/getbyname/Imron%20Malee'); 
       const response = await axios(config); 
-      console.log(response)
-      setData(response.data);
+      if(response.status===200){
+        setData(response.data.Result);
+      }
+      
+      
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
+
+  
   
   return (
     <div>
@@ -73,12 +78,12 @@ export default function Template() {
         id="sideNav"
       >
         <a className="navbar-brand js-scroll-trigger" href="#page-top">
-          <span className="d-block d-lg-none">Imron Malee</span>
+          <span className="d-block d-lg-none">{data.fullname}</span>
           <span className="d-none d-lg-block">
             <img
               className="img-fluid img-profile rounded-circle mx-auto mb-2"
               src={profile}
-              alt="Imron Malee"
+              alt={data.fullname}
             />
           </span>
         </a>
@@ -133,14 +138,11 @@ export default function Template() {
               <span className="text-primary">Malee</span>
             </h1>
             <div className="subheading mb-5">
-              Khwaeng Khlong Chan, Bang Kapi District, Bangkok, Thailand
+              {data.address}
               {/* <a href="mailto:imron.malee@gmail.com">imron.malee@gmail.com</a> */}
             </div>
             <p className="lead mb-5">
-              I am experienced in leveraging agile frameworks to provide a
-              robust synopsis for high level overviews. Iterative approaches to
-              corporate strategy foster collaborative thinking to further the
-              overall value proposition.
+              {data.about}
             </p>
             <div className="social-icons">
               <a
@@ -178,73 +180,29 @@ export default function Template() {
         <section className="resume-section" id="experience">
           <div className="resume-section-content">
             <h2 className="mb-5">Experience</h2>
-
-            <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div className="flex-grow-1">
-                <h3 className="mb-0">Web Developer</h3>
-                <div className="subheading mb-3">Outsourcing</div>
-                <p>
-                  Development of software, websites, web applications for
-                  organizations, agencies, private companies, including
-                  government agencies.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <span className="text-primary">March 2021 to present</span>
-              </div>
-            </div>
-            <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div className="flex-grow-1">
-                <h3 className="mb-0">Web programmer (remote working)</h3>
-                <div className="subheading mb-3">
-                  Smart Multimedia Solution Co., Ltd.
-                </div>
-                <p>
-                  PHP Programmer (Codeigniter), ReactJS, Line messaging API.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <span className="text-primary">
-                  April 2018 to February 2021
-                </span>
-              </div>
-            </div>
-            <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div className="flex-grow-1">
-                <h3 className="mb-0">Work in information systems</h3>
-                <div className="subheading mb-3">
-                  Department of Older Persons
-                </div>
-                <p>
-                  Developing and administering internal systems, coordinating
-                  with external agencies.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <span className="text-primary">
-                  November 2015 to April 2017
-                </span>
-              </div>
-            </div>
+            {data.experience ? (
+                data.experience.map((value, key) => {
+                  return (
+                    <div className="d-flex flex-column flex-md-row justify-content-between mb-5" key={key}>
+                      <div className="flex-grow-1">
+                        <h3 className="mb-0">{value.position}</h3>
+                        <div className="subheading mb-3">{value.company}</div>
+                        <p>
+                         {value.description}
+                        </p>
+                      </div>
+                      <div className="flex-shrink-0">
+                        <span className="text-primary">{value.duration}</span>
+                      </div>
+                    </div>
+                  )
+                })
+                
+                
+            ) : (
+              <>ssss</>
+            )}
             
-            <div className="d-flex flex-column flex-md-row justify-content-between">
-              <div className="flex-grow-1">
-                <h3 className="mb-0">Software tester</h3>
-                <div className="subheading mb-3">
-                  Worldmedic Information and Technology Co., Ltd.
-                </div>
-                <p>
-                  Develop web applications (PHP) in the medical field and
-                  pharmacy system, and check the operation of a Windows Form
-                  program.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <span className="text-primary">
-                  February 2015 to October 2015
-                </span>
-              </div>
-            </div>
           </div>
         </section>
         <hr className="m-0" />
