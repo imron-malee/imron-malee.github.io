@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -36,3 +37,50 @@
     transform: rotate(360deg);
   }
 }
+
+.text-primary{
+  color: rgb(219, 208, 128) !important;
+}
+.resume-section h1{/*,.resume-section h2, .resume-section h3 */
+  color: #162B23;
+}
+nav.navbar-dark.bg-primary{
+  background-color: #162B23;
+}
+
+.navbar-nav .nav-item a{
+  color: rgb(219, 208, 128);
+}
+.navbar-nav .nav-item a:hover{
+  color: #222;
+  background-color: rgb(219, 208, 128);
+}
+
+#sideNav .navbar-brand .img-profile {
+  /* border: 0.5rem solid rgba(255, 215, 0, 0.3) !important; */
+  border-color: rgba(219, 208, 128, 0.2) !important;
+}
+
+.social-icons a.social-icon{
+  text-decoration: none !important;
+}
+
+.social-icons .social-icon:hover{
+  background-color: #162B23 !important;
+}
+
+.dev-icons li.custom-icon i{
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  
+  
+}
+.fa-codeigniter{
+  background-image: url('images/codeigniter-icon.svg'); 
+
+}
+
+
