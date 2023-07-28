@@ -1,43 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from "react";
 import profile from "../../images/profile.jpg";
 import "bootstrap";
 //import 'bootstrap/dist/css/bootstrap.css';
 import "../../css/styles.css";
 
-export default function Template() {
-  const [data, setData] = useState([]);
-
+export default function Template_html() {
   useEffect(() => {
-    fetchData();
-
     document.title = "About - Imron Malee";
     const metaTag = document.querySelector('meta[property="og:image"]');
     if (metaTag) {
       metaTag.setAttribute("content", profile);
     }
   }, []);
-
-
-
-
-  const fetchData = async () => {
-    let config = {
-      method: 'get',
-      url: 'https://aboutme-api-imronmalee.vercel.app/api/getbyname/Imron%20Malee?v=4',
-      headers: { }
-    };
-
-    try {
-      //const response = await axios.get('https://aboutme-api-imronmalee.vercel.app/api/getbyname/Imron%20Malee'); 
-      const response = await axios(config); 
-      console.log(response)
-      setData(response.data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-  
   return (
     <div>
       <meta charSet="utf-8" />
