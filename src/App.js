@@ -8,7 +8,7 @@ import Template from "./components/template/Template";
 function App() {
   return (
     <>
-    <Router basename="/">
+    <Router basename="/a">
       <Routes>
         <Route path="/" element={<Template/>} />
         <Route path="/a/b" element={<Template/>} />
