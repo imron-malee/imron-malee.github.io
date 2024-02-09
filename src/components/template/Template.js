@@ -200,7 +200,7 @@ export default function Template() {
                 
                 
             ) : (
-              <>ssss</>
+              <>Loading Data...</>
             )}
             
           </div>
